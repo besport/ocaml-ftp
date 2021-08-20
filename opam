@@ -1,0 +1,18 @@
+
+opam-version: "2.0"
+version: "0.1.1"
+maintainer: "smimram@gmail.com"
+authors: ["Samuel Mimram"]
+homepage: "http://savonet.sourceforge.net/"
+license: "GPL-2.0-only"
+build: [
+  ["./configure" "--prefix" prefix]
+  [make]
+]
+remove: [["ocamlfind" "remove" "ftp"]]
+depends: [
+  "ocamlfind"
+]
+install: [make "install"]
+synopsis: "Functions for accessing files via FTP"
+flags: light-uninstall

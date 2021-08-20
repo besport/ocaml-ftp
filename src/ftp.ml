@@ -241,7 +241,6 @@ let set_passive fc p =
 let connect_data fc =
   (* TODO: check and use passive *)
   let r = send_command fc Passive in
-  let n, s = r in
     check r;
     let data_port = get_pasv_port r in
     let icd, ocd = open_connection (ADDR_INET((fc.host.h_addr_list).(0), data_port)) in
@@ -275,7 +274,7 @@ let get_file_a append fc fin fout =
   let flags = if append then [O_WRONLY; O_APPEND] else [O_WRONLY; O_TRUNC; O_CREAT] in
   let foutd = openfile fout flags 0o644 in
   let buf_len = 16384 in
-  let buf = String.create buf_len in
+  let buf = Bytes.create buf_len in
   let len = ref 1 in
   let r = send_command fc (Retrieve fin) in
     if (fst r) = 550 then raise Not_found;
@@ -332,7 +331,6 @@ let list_files fc dir =
     if n = 550 then raise Not_found;
     check r;
     let ret = ref [] in
-    let len = ref 1 in
       (
 	try
 	  while true
@@ -473,7 +471,7 @@ sig
 
   val close : file_descr -> unit
 
-  val read : file_descr -> string -> int -> int -> int
+  val read : file_descr -> bytes -> int -> int -> int
 
   type seek_command =
     | SEEK_SET
@@ -561,7 +559,7 @@ struct
 	try
 	  input i_c buf ofs len
 	with
-	  | Sys_error("Connection reset by peer") ->
+	  | Sys_error e when e = "Connection reset by peer" ->
 	      stop_reading conn i_c;
 	      let c = start_reading conn path !pos in
 		ic := Some c;

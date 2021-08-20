@@ -16,7 +16,7 @@ Patches are welcome :)
 
 Dependencies
 ============
-To build this library you need to have OCaml 3.07.
+To build this library you need to have OCaml 4.12.
 
 
 Installation
@@ -51,4 +51,4 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 
 The version of this README is:
-$Id: README,v 1.3 2004/02/24 14:36:00 smimram Exp $
+$Id: README,v 1.3 2021/08/21 19:55:00 smimram Exp $

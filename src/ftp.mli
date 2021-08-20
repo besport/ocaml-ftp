@@ -94,7 +94,7 @@ val get_file : ftp_connection -> string -> string -> unit
 val resume_file : ftp_connection -> string -> string -> int -> unit
 
 (** [get_file_portion fc src file_ofs buf ofs len] downloads [len] octets of file [src] starting at position [file_ofs] and stores it in [buf] starting at position [ofs]. Returns the number of bytes actually read. *)
-val get_file_portion : ftp_connection -> string -> int -> string -> int -> int -> int
+val get_file_portion : ftp_connection -> string -> int -> bytes -> int -> int -> int
 
 (** [mv fc src dst] moves the file [src] to [dst]. *)
 val mv : ftp_connection -> string -> string -> unit
@@ -133,7 +133,7 @@ sig
   val close : file_descr -> unit
 
   (** Read data in an opened file. *)
-  val read : file_descr -> string -> int -> int -> int
+  val read : file_descr -> bytes -> int -> int -> int
 
   (** Positioning modes for [lseek]. *)
   type seek_command =
