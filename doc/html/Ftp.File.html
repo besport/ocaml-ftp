@@ -1,0 +1,94 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="Start" href="index.html">
+<link rel="Up" href="Ftp.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Ftp" rel="Chapter" href="Ftp.html"><title>Ftp.File</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a href="Ftp.html">Up</a>
+&nbsp;</div>
+<center><h1>Module <a href="type_Ftp.File.html">Ftp.File</a></h1></center>
+<br>
+<pre><span class="keyword">module</span> File: <code class="type"><a href="Ftp.FILE.html">FILE</a></code><code class="type"> </code></pre>High-level functions to access files via ftp.<br>
+<hr width="100%">
+<pre><span class="keyword">val</span> <a name="VALls"></a>ls : <code class="type">string -> (string * <a href="Ftp.html#TYPEstats">Ftp.stats</a>) list</code></pre><div class="info">
+List files and their properties of a directory.<br>
+</div>
+<pre><span class="keyword">type</span> <a name="TYPEfile_descr"></a><code class="type"></code>file_descr </pre>
+<div class="info">
+Type of file descriptors.<br>
+</div>
+
+<br><code><span class="keyword">type</span> <a name="TYPEopen_flag"></a><code class="type"></code>open_flag = </code><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span class="constructor">O_RDONLY</span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span class="constructor">O_WRONLY</span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span class="constructor">O_RDWR</span></code></td>
+
+</tr></table>
+
+<div class="info">
+Open files: what for?<br>
+</div>
+
+<pre><span class="keyword">val</span> <a name="VALopenfile"></a>openfile : <code class="type">string -> <a href="Ftp.FILE.html#TYPEopen_flag">open_flag</a> list -> <a href="Ftp.html#TYPEfile_perm">Ftp.file_perm</a> -> <a href="Ftp.FILE.html#TYPEfile_descr">file_descr</a></code></pre><div class="info">
+<code class="code">openfile name flags perms</code> opens the file named <code class="code">name</code> with flags <code class="code">flags</code> and mode <code class="code">mode</code> (in octal).<br>
+</div>
+<pre><span class="keyword">val</span> <a name="VALclose"></a>close : <code class="type"><a href="Ftp.FILE.html#TYPEfile_descr">file_descr</a> -> unit</code></pre><div class="info">
+Close a previously opened file.<br>
+</div>
+<pre><span class="keyword">val</span> <a name="VALread"></a>read : <code class="type"><a href="Ftp.FILE.html#TYPEfile_descr">file_descr</a> -> string -> int -> int -> int</code></pre><div class="info">
+Read data in an opened file.<br>
+</div>
+<br><code><span class="keyword">type</span> <a name="TYPEseek_command"></a><code class="type"></code>seek_command = </code><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span class="constructor">SEEK_SET</span></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><code>indicates positions relative to the beginning of the file</code></td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span class="constructor">SEEK_CUR</span></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><code>indicates positions relative to the current position</code></td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span class="constructor">SEEK_END</span></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><code>indicates positions relative to the end of the file</code></td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+<div class="info">
+Positioning modes for <code class="code">lseek</code>.<br>
+</div>
+
+<pre><span class="keyword">val</span> <a name="VALlseek"></a>lseek : <code class="type"><a href="Ftp.FILE.html#TYPEfile_descr">file_descr</a> -> int -> <a href="Ftp.FILE.html#TYPEseek_command">seek_command</a> -> int</code></pre><div class="info">
+Seek in an opened file.<br>
+</div>
+</body></html>

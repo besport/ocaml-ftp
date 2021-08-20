@@ -1,0 +1,141 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Ftp" rel="Chapter" href="Ftp.html"><title>Index of values</title>
+</head>
+<body>
+<center><h1>Index of values</h1></center>
+<table>
+<tr><td align="left"><br>C</td></tr>
+<tr><td><a href="Ftp.html#VALchdir">chdir</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Change the current directory.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALchdir_up">chdir_up</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Change the current directory to the surrounding one.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.FILE.html#VALclose">close</a> [<a href="Ftp.FILE.html">Ftp.FILE</a>]</td>
+<td><div class="info">
+Close a previously opened file.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALconnect">connect</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+<code class="code">connect server port login pass</code> connects to the server named <code class="code">server</code> on port <code class="code">port</code> using the given login and password.
+</div>
+</td></tr>
+<tr><td align="left"><br>D</td></tr>
+<tr><td><a href="Ftp.html#VALdisconnect">disconnect</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Close a previously opened connection.
+</div>
+</td></tr>
+<tr><td align="left"><br>G</td></tr>
+<tr><td><a href="Ftp.html#VALget_cur_dir">get_cur_dir</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Get the directory we're currently in on the server.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALget_file">get_file</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+<code class="code">get_file fc src dst</code> downloads the file <code class="code">src</code> and stores it in <code class="code">dst</code>.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALget_file_portion">get_file_portion</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+<code class="code">get_file_portion fc src file_ofs buf ofs len</code> downloads <code class="code">len</code> octets of file <code class="code">src</code> starting at position <code class="code">file_ofs</code> and stores it in <code class="code">buf</code> starting at position <code class="code">ofs</code>.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALget_file_size">get_file_size</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Get the size of a file (in bytes).
+</div>
+</td></tr>
+<tr><td align="left"><br>L</td></tr>
+<tr><td><a href="Ftp.html#VALlist_files">list_files</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+List all the files contained in a directory.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.FILE.html#VALls">ls</a> [<a href="Ftp.FILE.html">Ftp.FILE</a>]</td>
+<td><div class="info">
+List files and their properties of a directory.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALls">ls</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+List all the files contained in a directory, specifying its properties.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.FILE.html#VALlseek">lseek</a> [<a href="Ftp.FILE.html">Ftp.FILE</a>]</td>
+<td><div class="info">
+Seek in an opened file.
+</div>
+</td></tr>
+<tr><td align="left"><br>M</td></tr>
+<tr><td><a href="Ftp.html#VALmkdir">mkdir</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Create a directory.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALmv">mv</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+<code class="code">mv fc src dst</code> moves the file <code class="code">src</code> to <code class="code">dst</code>.
+</div>
+</td></tr>
+<tr><td align="left"><br>N</td></tr>
+<tr><td><a href="Ftp.html#VALnop">nop</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Don't do anything :)
+</div>
+</td></tr>
+<tr><td align="left"><br>O</td></tr>
+<tr><td><a href="Ftp.FILE.html#VALopenfile">openfile</a> [<a href="Ftp.FILE.html">Ftp.FILE</a>]</td>
+<td><div class="info">
+<code class="code">openfile name flags perms</code> opens the file named <code class="code">name</code> with flags <code class="code">flags</code> and mode <code class="code">mode</code> (in octal).
+</div>
+</td></tr>
+<tr><td align="left"><br>R</td></tr>
+<tr><td><a href="Ftp.FILE.html#VALread">read</a> [<a href="Ftp.FILE.html">Ftp.FILE</a>]</td>
+<td><div class="info">
+Read data in an opened file.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALresume_file">resume_file</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+<code class="code">resume_file fc src dst ofs</code> downloads the file <code class="code">src</code> starting at offset <code class="code">ofs</code> and appends it to <code class="code">dst</code>.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALrm">rm</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Remove a file.
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALrmdir">rmdir</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Remove a directory.
+</div>
+</td></tr>
+<tr><td align="left"><br>S</td></tr>
+<tr><td><a href="Ftp.html#VALset_passive">set_passive</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Shoud the data connection be done in passive mode? (not used for now: the connection is always in passive mode).
+</div>
+</td></tr>
+<tr><td><a href="Ftp.html#VALstat">stat</a> [<a href="Ftp.html">Ftp</a>]</td>
+<td><div class="info">
+Get the properties of a file.
+</div>
+</td></tr>
+</table><br>
+</body>
+</html>
